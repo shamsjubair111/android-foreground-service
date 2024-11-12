@@ -1,12 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.persistentserviceapp">
 
-    <!-- Permission to run a foreground service -->
+    <!-- Permissions to run a foreground service and access location -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> <!-- Optional for background location -->
-
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -25,4 +24,5 @@
         <service android:name=".ForegroundService"
             android:foregroundServiceType="location" />
     </application>
+
 </manifest>
